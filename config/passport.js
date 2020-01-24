@@ -26,7 +26,7 @@ passport.deserializeUser(async (id, done) => {
 passport.use(
   new GoogleStrategy(
     {
-      callbackURL: '/google/redirect',
+      callbackURL: 'https://s0c14l-l0g1n.herokuapp.com/google/redirect',
       clientID: process.env.G_CLIENT_ID,
       clientSecret: process.env.G_CLIENT_SECRET,
       profileFields: ['id', 'displayName', 'name', 'email']
@@ -55,7 +55,7 @@ passport.use(
 passport.use(
   new FacebookStrategy(
     {
-      callbackURL: '/facebook/redirect',
+      callbackURL: 'https://s0c14l-l0g1n.herokuapp.com/facebook/redirect',
       clientID: process.env.FB_CLIENT_ID,
       clientSecret: process.env.FB_CLIENT_SECRET,
       profileFields: ['id', 'displayName', 'name', 'email']
